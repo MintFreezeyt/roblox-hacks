@@ -15,7 +15,6 @@ end
 local CurrentPlayer = GetPlayer()
  
  
---[[ We need someway to do this without substrings, right? ]]--
 Explode = function(String)
     local List = {}
     for Item in string.gmatch(String, "%S+") do
@@ -24,7 +23,7 @@ Explode = function(String)
     return List
 end
  
---[[ In all of my days of scripting, I feel like this is the worst recurse function I've made... ]]--
+
 Recurse = function(Location, Type, Objects)
     if not Objects or type(Objects) ~= "table" then
         Objects = {}
@@ -38,7 +37,6 @@ Recurse = function(Location, Type, Objects)
     return Objects
 end
  
---[[ But this is a pretty good players-getter ]]--
 local GetPlayers = function(String)
     local List = Explode(String)
     local Players = {}
@@ -116,7 +114,7 @@ local Commands = {
     {"FastSpeed", function(String)
         local PlayerList = GetPlayers(String)
         for i, v in pairs(PlayerList) do
-            pcall(function() v.Character.Humanoid.WalkSpeed = 50 end)
+            pcall(function() v.Character.Humanoid.WalkSpeed = 100 end)
         end
     end},
     {"NormalSpeed", function(String)
@@ -397,7 +395,7 @@ v.StarterGui:SetCoreGuiEnabled('All',true);
 local CommandAt = 1
  
 --[[
-Keywords (start with "$")
+Keywords (start with "!")
     All - All players.
     Others - All players excluding you.
     Me - Only you.
