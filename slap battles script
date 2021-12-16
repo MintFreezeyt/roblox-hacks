@@ -1,3 +1,13 @@
 --www.rblxscripts.net--
  
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+other slap battle gui script
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/rbx_scripts/main/slap_battles.lua"))()
